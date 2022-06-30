@@ -5,6 +5,8 @@ import Header from './Header';
 import InputTodo from './InputTodo';
 import {v1 as uuid} from 'uuid';
 
+import Navbar from './Navbar';
+
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import About from '../pages/About';
@@ -82,9 +84,7 @@ const TodoContainer =() =>{
 
 
     return (
-        <React.Fragment>
-        <Routes>
-        <Route exact path = "/" element = {
+     
                 <div className="container">
                     <div className="inner">
                         <Header />
@@ -95,12 +95,7 @@ const TodoContainer =() =>{
                             deleteTodoProps = {delTodo}
                             setUpdate = {setUpdate} />
                     </div>
-                </div>} />
-                    <Route path="/about" element = {<About />} />
-                    <Route path='*' element = {<NoMatch />} />
-                </Routes>
-        </React.Fragment>
+                </div>
     )
 }
-
 export default TodoContainer;
