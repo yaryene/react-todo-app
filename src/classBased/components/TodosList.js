@@ -9,7 +9,9 @@ class TodosList extends Component {
                 <TodoItem 
                   key={todo.id} 
                   todos_for_item = {todo}
-                  handleChangeProps_for_item = {this.props.handleChangeProps} />
+                  handleChangeProps_for_item = {this.props.handleChangeProps}
+                  deleteTodoProps_for_item = {this.props.deleteTodoProps}
+                  setUpdate_for_item = {this.props.setUpdate} />
             ))}
         </ul>
     );
